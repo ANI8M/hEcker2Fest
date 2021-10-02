@@ -107,26 +107,6 @@ int main(){
             }
         }
     }
-12
 
-    debug(prefa);
-    debug(prefb);
-
-    int ans = 0;
-    for(int i = 1 ; i <= n ; i++){
-        for(int j = i ; j <= n ; j++){
-            int fir = prefa[i-1];
-            int mid = (prefb[j] - prefb[i-1]);
-            int end = (prefa[n] - prefa[j-1]);
-            int curr_len = fir + mid + end;
-            debug(i , j , curr_len , fir, mid , end);
-            ans = max(ans , curr_len);
-        }
-    }
-
-    ans = max(ans , prefa[n]);
-    ans = max(ans , prefb[n]);
-
-    cout << ans << endl;
 }
 
